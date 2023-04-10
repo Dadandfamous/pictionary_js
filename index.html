@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Charades/Pictionary Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Charades/Pictionary Game</h1>
+</header>
+<main>
+    <div id="word-list-container">
+        <h2>Words:</h2>
+        <ol id="word-list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+        <button id="randomize-button">Randomize</button>
+    </div>
+</main>
+<footer>
+    <button id="upload-button">Upload List of Words</button>
+</footer>
+<div id="upload-dialog" class="dialog">
+    <form>
+        <label for="words-input">Enter list of words (separated by commas):</label>
+        <input type="text" id="words-input" name="words" required>
+        <input type="submit" value="Submit">
+        <button type="button" id="cancel-button">Cancel</button>
+    </form>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

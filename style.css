@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FCEDEA;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #F76C6C;
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    margin: 2rem;
+}
+
+#word-list-container {
+    background-color: #F8EDD3;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: decimal;
+}
+
+li {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #F76C6C;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #F8EDD3;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.dialog form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.dialog label, .dialog input, .dialog button {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.dialog input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.dialog input[type="submit"], .dialog button {
+    background-color: #F76C6C;
+    color: white;
+    padding: 0
