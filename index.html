@@ -28,12 +28,19 @@
 </footer>
 <div id="upload-dialog" class="dialog">
     <form>
-        <label for="words-input">Enter list of words (separated by commas):</label>
-        <input type="text" id="words-input" name="words" required>
-        <input type="submit" value="Submit">
-        <button type="button" id="cancel-button">Cancel</button>
+        <label for="words-input">Enter a comma-separated list of words:</label>
+        <input type="text" id="words-input" required>
+        <div id="current-words">
+            <p>Current words:</p>
+            <p id="current-words-list"></p>
+        </div>
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="button" id="cancel-button">Cancel</button>
+        </div>
     </form>
 </div>
+
 <script src="app.js"></script>
 </body>
 </html>

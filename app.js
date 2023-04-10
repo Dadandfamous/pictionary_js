@@ -4,8 +4,8 @@ const uploadButton = document.getElementById('upload-button');
 const uploadDialog = document.getElementById('upload-dialog');
 const cancelButton = document.getElementById('cancel-button');
 const wordsInput = document.getElementById('words-input');
-
-let words = ['apple', 'banana', 'cherry', 'orange', 'pear', 'strawberry'];
+const currentWordsList = document.getElementById('current-words-list');
+let words = ['appel', 'zon', 'wolk', 'auto', 'bad', 'thee', 'brood', 'trap', 'hond', 'kat', 'bal', 'maan', 'pijl', 'boom', 'bom', 'vrachtwagen', 'boot', 'skateboard', 'schoenen', 'wortel', 'konijn', 'ijsje', 'eend', 'zonneschijn', 'kikker', 'brood', 'klok', 'snoep', 'melk', 'schildpad', 'telefoon', 'konijn', 'stoel', 'tafel', 'zweep', 'schotel', 'boter', 'bezem', 'ei', 'fiets', 'vlieger', 'sleutel', 'zaag', 'afstandsbediening', 'eiland', 'kerstman', 'wcpapier', 'dolfijn', 'paard', 'kapstok', 'wcborstel', 'tandenborstel', 'lantaarnpaal', 'kruiwagen', 'gordijnen', 'zonnebril', 'banaan', 'kamerplant', 'vlinder', 'computer', 'prullenbak', 'sinterklaas', 'paashaas', 'winkelwagen', 'legoblokje', 'hond', 'koe', 'varken', 'televisie', 'kerstboom', 'koptelefoon', 'rolstoel', 'lampion', 'verkeerslicht', 'banaan', 'peer', 'druiven', 'kokosnoot', 'palmboom', 'surfboard', 'golf', 'bloempot', 'kikker', 'koalabeer', 'uil', 'vleermuis', 'walvis', 'haai', 'kwal', 'cadeau', 'boodschappenkar', 'sjaal', 'telefoon', 'onderbroek', 'laars', 'rits', 'trui', 'paraplu', 'duikbril', 'snorkel', 'zwemvest', 'zwembandje', 'handdoek', 'narcis', 'tulp', 'zwembad', 'duikplank', 'engel', 'ster', 'sok', 'huilen', 'slee', 'nagellak', 'glijbaan', 'spiegel', 'broccoli', 'reuzenrad', 'botsauto'];
 let usedWords = [];
 
 function getRandomInt(max) {
@@ -37,12 +37,13 @@ function updateWordList(words) {
     wordList.innerHTML = '';
     words.forEach(function(word, index) {
         let listItem = document.createElement('li');
-        listItem.textContent =  word;
+        listItem.textContent = word;
         wordList.appendChild(listItem);
     });
 }
 
 function showUploadDialog() {
+    currentWordsList.textContent = words.join(', ');
     uploadDialog.style.display = 'block';
 }
 
@@ -74,4 +75,5 @@ cancelButton.addEventListener('click', hideUploadDialog);
 
 uploadDialog.querySelector('form').addEventListener('submit', handleUploadFormSubmit);
 
+currentWordsList.textContent = words.join(', ');
 updateWordList(getRandomWords(6));
